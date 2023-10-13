@@ -6,7 +6,9 @@ const interference = [
 	`${__dirname}/audio/SFX/GENRL/Bank_053/sound_003.mp3`
 ]
 
-CH = null;
+const PlaybackFMMusic  = [47,54,61,68,75,82,89,96,103,110,117,124];
+const PlaybackFMIntros = [ 3, 3, 3, 3, 3, 3, 3, 3,  3,  3,  3,  3];
+const pathPlaybackFM   = `${__dirname}/audio/STREAMS/CH/`
 
 const KRoseMusic  = [51,58,65,72,79,86,93,100,107,114,121,128,135,142,149];
 const KRoseIntros = [ 3, 3, 3, 3, 3, 3, 3,  3,  3,  3,  3,  3,  3,  3,  3];
@@ -18,7 +20,7 @@ const pathKDST   = `${__dirname}/audio/STREAMS/CR/`;
 
 const BounceFMMusic  = [61,68,75,82,89,96,103,110,117,124,131,138,145,152,159,166,173];
 const BounceFMIntros = [ 3, 3, 3, 3, 3, 3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3,  3];
-const pathBounceFM = `${__dirname}/audio/STREAMS/DS/`;
+const pathBounceFM   = `${__dirname}/audio/STREAMS/DS/`;
 
 const RadioLosSantosMusic  = [51,58,65,72,79,86,92,98,104,109,116,123,130,135,142,148];
 const RadioLosSantosIntros = [ 3, 3, 3, 3, 3, 3, 3, 3,  2,  3,  3,  3,  2,  3,  2,  1];
@@ -35,7 +37,7 @@ RE = null;
 RG = null;
 
 
-CH = null;
+const PlaybackFM = [131,35,46,PlaybackFMMusic,PlaybackFMIntros,pathPlaybackFM];
 const KRose = [156,41,50,KRoseMusic,KRoseIntros,pathKRose];
 const KDST = [157,32,43,KDSTMusic,KDSTIntros,pathKDST];
 const BounceFM = [180,52,60,BounceFMMusic,BounceFMIntros,pathBounceFM];
@@ -45,7 +47,7 @@ NJ = null;
 RE = null;
 RG = null;
 
-const radiosList = [0,CH,KRose,KDST,BounceFM,RadioLosSantos,RadioX,NJ,RE,RG];
+const radiosList = [0,PlaybackFM,KRose,KDST,BounceFM,RadioLosSantos,RadioX,NJ,RE,RG];
 
 //Variables
 var radio = 0;
@@ -153,7 +155,7 @@ const exec = require('child_process').exec;
 
 while (radio == 0) {
 	console.log('Choose a radio station or press 0 to change preferences: ' + 
-	'\n01 - CH\t\t\t\t06 - RADIO X' + 
+	'\n01 - PLAYBACK FM\t\t06 - RADIO X' + 
 	'\n02 - KROSE\t\t\t07 - NJ' + 
 	'\n03 - K-DST\t\t\t08 - RE' +
 	'\n04 - BOUNCE FM\t\t\t09 - RG' + 
