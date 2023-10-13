@@ -1,0 +1,13 @@
+# ignore audio files
+audio/SFX/GENRL/Bank_053/*mp3
+audio/STREAMS/ADVERTS/*.mp3
+audio/STREAMS/CH/*.mp3
+audio/STREAMS/CO/*.mp3
+audio/STREAMS/CR/*.mp3
+audio/STREAMS/DS/*.mp3
+audio/STREAMS/HC/*.mp3
+audio/STREAMS/MH/*.mp3
+audio/STREAMS/MR/*.mp3
+audio/STREAMS/NJ/*.mp3
+audio/STREAMS/RE/*.mp3
+audio/STREAMS/RG/*.mp3
